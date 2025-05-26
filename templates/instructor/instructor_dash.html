@@ -1,0 +1,78 @@
+{% extends 'instructor/base.html' %}
+
+{% block title %}Instructor Dashboard{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='instructor_dash.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="header">
+  <h1>Welcome back, {{ user.fullname if user else 'Instructor' }}!</h1>
+  <div class="header-actions">
+    <div class="profile-picture">
+      <img src="{{ url_for('static', filename='images/student6.jpg') }}" alt="Profile Picture">
+      <span>{{ user.fullname if user else 'John Doe' }}</span>
+    </div>
+  </div>
+</div>
+
+<!-- Charts -->
+<section class="charts">
+  <div class="chart-box">
+    <h3>Student Enrollments</h3>
+    <canvas id="enrollmentsChart"></canvas>
+  </div>
+  <div class="chart-box">
+    <h3>Course Completion Rate</h3>
+    <canvas id="completionChart"></canvas>
+  </div>
+</section>
+
+<!-- My Courses -->
+<section class="my-courses">
+  <div class="section-header">
+    <h2>My Courses</h2>
+    <div class="course-actions">
+      <a href="{{ url_for('create_course') }}" class="btn-primary">Create New Course</a>
+      <a href="{{ url_for('instructor_my_courses') }}" class="btn-outline-primary">View All Courses</a>
+    </div>
+  </div>
+
+  <div class="course-grid">
+    {% for course in courses %}
+      <a href="{{ url_for('view_course', course_id=course._id|string) }}" class="course-card">
+        <img src="{{ course.thumbnail_url or url_for('static', filename='images/' ~ course.image) }}" alt="{{ course.title }}" class="course-banner">
+        <div class="course-info">
+          <h4 class="course-title">{{ course.title }}</h4>
+          <p class="course-meta"><i class="fas fa-user-graduate"></i> {{ course.students or 0 }} enrolled</p>
+
+          <div class="course-details">
+            <span><i class="fas fa-clock"></i> {{ course.duration or '—' }}</span>
+            <span><i class="fas fa-signal"></i> {{ course.difficulty | capitalize }}</span>
+            <span><i class="fas fa-layer-group"></i> {{ course.structure | length }} Modules</span>
+            <span><i class="fas fa-book"></i> {{
+              course.structure | map(attribute='chapters') | map('length') | sum
+            }} Chapters</span>
+            <span><i class="fas fa-list-ul"></i> {{
+              course.structure | map(attribute='chapters') | sum(start=[]) | map(attribute='topics') | map('length') | sum
+            }} Topics</span>
+          </div>
+
+          <div class="course-updated">
+            <i class="fas fa-calendar-alt"></i> Updated: {{ course.updated or "Recently" }}
+          </div>
+        </div>
+      </a>
+    {% else %}
+      <p>No courses available yet.</p>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='js/instructor_dash.js') }}"></script>
+{% endblock %}
