@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #f9fafb, #e0e7ff);
+    background: linear-gradient(180deg, #f9fafb, #ede9fe);
     color: #212529;
     min-height: 100vh;
     overflow-x: hidden;
@@ -59,7 +59,7 @@ body {
 }
 
 .container button {
-    background-color: #2380d1;
+    background-color: #7c3aed;
     color: #fff;
     font-size: 12px;
     padding: 10px 45px;
@@ -88,7 +88,7 @@ body {
 }
 
 .container input {
-    background-color: #eee;
+    background-color: #f3e8ff;
     border: none;
     margin: 8px 0;
     padding: 10px 15px;
@@ -129,7 +129,6 @@ body {
     animation: move 0.6s;
 }
 
-
 @keyframes move {
     0%, 49.99% {
         opacity: 0;
@@ -140,6 +139,7 @@ body {
         z-index: 5;
     }
 }
+
 .toggle-container {
     position: absolute;
     top: 0;
@@ -158,9 +158,8 @@ body {
 }
 
 .toggle {
-    background-color: #2372b8;
-    height: 100%;
-    background: linear-gradient(to right, #3285bd, #3b82f6);
+    background-color: #6b21a8;
+    background: linear-gradient(to right, #7c3aed, #a78bfa);
     color: #fff;
     position: relative;
     left: -100%;
@@ -206,7 +205,7 @@ body {
     transform: translateX(200%);
 }
 
-/* Form Container (moves form downward slightly) */
+/* Sign In Form Styling */
 .form-container.sign-in {
     display: flex;
     justify-content: flex-start;
@@ -217,7 +216,6 @@ body {
     padding-top: 0px;
 }
 
-/* Form Styling */
 .form-container.sign-in form {
     width: 100%;
     max-width: 350px;
@@ -226,24 +224,19 @@ body {
     align-items: left;
 }
 
-
-
-
-
-
-/* Updated Dropdown Styling for Role Selector */
+/* Role Selector */
 .user-role {
     width: 100%;
     margin: 12px 0;
     padding: 12px 15px;
-    background-color: #eee;
+    background-color: #f3e8ff;
     border: none;
     border-radius: 8px;
     font-size: 14px;
     font-family: 'Montserrat', sans-serif;
-    color: #333;
-    appearance: none; /* removes default browser dropdown arrow */
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%233b82f6" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    color: #4b0082;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%237c3aed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 18px;
@@ -253,10 +246,10 @@ body {
 
 .user-role:focus {
     background-color: #fff;
-    border: 1px solid #2563EB;
+    border: 1px solid #9333ea;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-    color: #1E3A8A;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+    color: #6b21a8;
 }
 
 .user-role option {
@@ -265,8 +258,7 @@ body {
     font-size: 14px;
 }
 
-
-/* Navbar Section */
+/* Navbar */
 nav {
     background: #ffffff;
     padding: 12px 30px;
@@ -276,7 +268,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    margin-bottom: 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -284,7 +275,7 @@ nav {
 }
 
 nav h2 {
-    color: #3b82f6;
+    color: #9333ea;
     font-weight: 800;
     font-size: 2rem;
     margin-left: 12px;
@@ -297,7 +288,7 @@ nav h2 {
 
 .nav-links a {
     text-decoration: none;
-    color: #3b82f6;
+    color: #7c3aed;
     font-weight: 700;
     margin-left: 15px;
     padding: 8px 18px;
@@ -307,54 +298,17 @@ nav h2 {
 }
 
 .nav-links a:hover {
-    background-color: #3b82f6;
+    background-color: #7c3aed;
     color: #ffffff;
-    box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 6px 18px rgba(124, 58, 237, 0.4);
     transform: translateY(-2px);
 }
 
-/* Adjustments for better visibility */
 body {
-    margin-top: 60px;  /* Reduced the margin-top to bring the form closer to the navbar */
+    margin-top: 60px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .navbar .logo h2 {
-        font-size: 1.5rem;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background-color: #512da8;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-    }
-
-    .navbar .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-}
-
-
-/*Error message*/
+/* Flash Messages */
 .flash-messages {
   margin: 20px auto;
   width: 90%;
@@ -370,9 +324,9 @@ body {
 }
 
 .alert-success {
-  background-color: #d1fae5;
-  color: #065f46;
-  border: 1px solid #34d399;
+  background-color: #e9d5ff;
+  color: #4c1d95;
+  border: 1px solid #c084fc;
 }
 
 .alert-danger {
