@@ -1,21 +1,22 @@
 /* ======= Global Variables ======= */
 :root {
-  --bg-light: #f8fafc;
-  --bg-dark: #1a1c2c;
-  --text-light: #0f172a;
-  --text-dark: #f1f5f9;
+  --bg-light: #faf5ff;
+  --bg-dark: #1e1b2e;
+  --text-light: #2e1065;
+  --text-dark: #f3e8ff;
   --card-light: #ffffff;
-  --card-dark: #2d3142;
-  --primary: #3b82f6;
-  --primary-dark: #0f172a;
-  --accent: #3b82f6;
-  --muted: #64748b;
-  --hover-bg: #f1f5f9;
-  --hover-dark-bg: #2a2d3e;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --card-dark: #2a1e4c;
+  --primary: #8b5cf6;
+  --primary-dark: #6b21a8;
+  --accent: #a855f7;
+  --muted: #a78bfa;
+  --hover-bg: #f3e8ff;
+  --hover-dark-bg: #3b2a60;
+  --shadow: 0 4px 20px rgba(139, 92, 246, 0.12);
   --radius: 12px;
   --transition: 0.3s ease-in-out;
 }
+
 
 /* ======= Base Styling ======= */
 body {

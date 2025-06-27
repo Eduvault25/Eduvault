@@ -1,20 +1,21 @@
 :root {
-  --primary: #3b82f6;
-  --primary-dark: #1e40af;
+  --primary: #8b5cf6;
+  --primary-dark: #6b21a8;
   --danger: #ef4444;
-  --bg-light: #f9fafb;
-  --bg-dark: #181d2f;
-  --card-bg-light: #fff;
-  --card-bg-dark: #222943;
-  --text-light: #f1f5f9;
-  --text-dark: #1f2937;
-  --text-muted-light: #7a7e85;
-  --text-muted-dark: #94a3b8;
-  --border-light: #e5e7eb;
-  --border-dark: #323958;
-  --shadow-light: 0 4px 18px rgba(0,0,0,0.08);
-  --shadow-dark: 0 8px 26px rgba(59,130,246,0.15);
+  --bg-light: #faf5ff;
+  --bg-dark: #1e1b2e;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #2a1e4c;
+  --text-light: #f3e8ff;
+  --text-dark: #2e1065;
+  --text-muted-light: #a78bfa;
+  --text-muted-dark: #d8b4fe;
+  --border-light: #e9d5ff;
+  --border-dark: #4c1d95;
+  --shadow-light: 0 4px 18px rgba(139, 92, 246, 0.1);
+  --shadow-dark: 0 8px 26px rgba(139, 92, 246, 0.15);
 }
+
 
 [data-theme="dark"], html[data-theme="dark"] {
   --bg: var(--bg-dark);

@@ -1,19 +1,20 @@
 /* ========== SETTINGS PAGE CSS ========== */
 
 :root {
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --accent: #38bdf8;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --bg: #f9fafb;
+  --primary: #8b5cf6;
+  --primary-dark: #6b21a8;
+  --accent: #a78bfa;
+  --success: #7c3aed;
+  --warning: #c084fc;
+  --danger: #be185d;
+  --text: #2e1065;
+  --text-muted: #a78bfa;
+  --bg: #faf5ff;
   --card-bg: #ffffff;
-  --border: #e2e8f0;
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --border: #ddd6fe;
+  --shadow: 0 4px 16px rgba(139, 92, 246, 0.15);
 }
+
 
 [data-theme="dark"] {
   --text: #f8fafc;

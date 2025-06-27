@@ -2,20 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 :root {
-  --primary-blue: #3b82f6;
-  --primary-dark: #0f172a;
-  --bg-light: #f9fafb;
-  --bg-dark: #1e1e2f;
-  --text-light: #f1f5f9;
-  --text-dark: #1f2937;
-  --text-muted-light: #6b7280;
-  --text-muted-dark: #94a3b8;
+  --primary-purple: #8b5cf6;
+  --primary-dark: #6b21a8;
+  --bg-light: #faf5ff;
+  --bg-dark: #1e1b2e;
+  --text-light: #f3e8ff;
+  --text-dark: #2e1065;
+  --text-muted-light: #7e22ce;
+  --text-muted-dark: #d8b4fe;
   --card-bg-light: #ffffff;
-  --card-bg-dark: #2d2e3a;
-  --border-light: #e2e8f0;
-  --border-dark: #334155;
-  --shadow-light: rgba(0, 0, 0, 0.06);
-  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --card-bg-dark: #2a1e4c;
+  --border-light: #e9d5ff;
+  --border-dark: #4c1d95;
+  --shadow-light: rgba(139, 92, 246, 0.1);
+  --shadow-dark: rgba(107, 33, 168, 0.3);
   --transition: 0.3s ease-in-out;
 }
 
@@ -26,6 +26,7 @@
   --card-bg: var(--card-bg-light);
   --border: var(--border-light);
   --shadow: var(--shadow-light);
+  --primary-color: var(--primary-purple);
 }
 
 [data-theme="dark"] {
@@ -35,6 +36,7 @@
   --card-bg: var(--card-bg-dark);
   --border: var(--border-dark);
   --shadow: var(--shadow-dark);
+  --primary-color: var(--primary-dark);
 }
 
 body {
@@ -65,7 +67,7 @@ body {
 .sidebar .brand {
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--primary-blue);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,15 +102,16 @@ body {
 .sidebar nav a:hover,
 .sidebar nav a.active,
 .sidebar nav button.theme-toggle:hover {
-  background-color: var(--primary-blue);
+  background-color: var(--primary-color);
   color: white;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
 }
 
 .sidebar nav a i,
 .sidebar nav button.theme-toggle i {
   width: 20px;
   text-align: center;
+  color: var(--primary-color);
 }
 
 .sidebar nav button.theme-toggle {
@@ -155,4 +158,3 @@ body {
   border-radius: 0 4px 4px 0;
   box-shadow: 2px 0 8px rgba(255, 255, 255, 0.3);
 }
-

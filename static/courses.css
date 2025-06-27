@@ -6,13 +6,12 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #f9fafb, #e0e7ff);
+  background: linear-gradient(180deg, #f9fafb, #ede9fe);
   color: #1e293b;
   line-height: 1.6;
 }
 
 /* Navbar */
-/* === NAVBAR === */
 .navbar {
   background: #ffffff;
   padding: 12px 30px;
@@ -22,17 +21,16 @@ body {
   align-items: center;
   z-index: 1000;
   position: relative;
-  border-radius: 0;
 }
 
-/* Logo color remains */
+/* Logo */
 .logo {
   font-size: 2rem;
   font-weight: 800;
-  color: #2563eb; /* more vibrant blue like in image */
+  color: #7c3aed; /* Primary purple */
 }
 
-/* === Nav Links Style === */
+/* Nav Links */
 .nav-links {
   display: flex;
   align-items: center;
@@ -42,7 +40,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #3b82f6;
+  color: #8b5cf6;
   font-weight: 700;
   padding: 10px 22px;
   border-radius: 14px;
@@ -51,26 +49,23 @@ body {
 }
 
 .nav-links a:hover {
-  background-color: #3b82f6;
+  background-color: #8b5cf6;
   color: #ffffff;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.3);
   transform: translateY(-1px);
 }
 
-/* Active tab (like Home) */
 .nav-links a.active {
-  background-color: #3b82f6;
+  background-color: #8b5cf6;
   color: white;
-  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+  box-shadow: 0 6px 18px rgba(139, 92, 246, 0.35);
 }
-
 
 .nav-links .btn:hover {
-  background: #2563eb;
+  background: #7c3aed;
   color: #ffffff;
-  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
 }
-
 
 /* Search Section */
 .search-bar {
@@ -79,7 +74,7 @@ body {
 }
 .search-bar h1 {
   font-size: 2.2rem;
-  color: #1e3a8a;
+  color: #6b21a8;
   margin-bottom: 1.5rem;
 }
 .search-box {
@@ -92,26 +87,26 @@ body {
   flex: 1;
   padding: 0.9rem 1.2rem;
   font-size: 1rem;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #d8b4fe;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   outline: none;
 }
 .search-box button {
-  background-color: #2563eb; /* Blue */
+  background-color: #7c3aed;
   color: #ffffff;
   font-weight: 600;
   font-size: 1rem;
   padding: 10px 28px;
   border: none;
-  border-radius: 0px; /* Fully rounded */
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
 }
 .search-box button:hover {
-   background-color: #1e40af; /* Slightly darker blue */
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+  background-color: #6b21a8;
+  box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35);
   transform: translateY(-1px);
 }
 
@@ -153,7 +148,7 @@ body {
   color: #475569;
 }
 
-/* Course Info Styling */
+/* Course Info */
 .course-info {
   list-style: none;
   padding: 0 1.2rem 1.2rem;
@@ -169,7 +164,7 @@ body {
   font-weight: 500;
 }
 .course-info i {
-  color: #3b82f6;
+  color: #8b5cf6;
   font-size: 1rem;
   min-width: 18px;
   transition: transform 0.2s ease;
@@ -194,16 +189,16 @@ body {
   background: #f97316;
 }
 .badge.new {
-  background: #3b82f6;
+  background: #a78bfa;
 }
 .badge.budget {
   background: #10b981;
 }
 .badge.beginner {
-  background-color: #4ade80;
+  background-color: #c084fc;
 }
 .badge.intermediate {
-  background-color: #facc15;
+  background-color: #e9d5ff;
   color: #1e293b;
 }
 .badge.advanced {
@@ -212,7 +207,7 @@ body {
 
 /* Enroll Button */
 .enroll-btn {
-   background-color: #3b82f6;
+  background-color: #8b5cf6;
   color: #ffffff;
   font-weight: 600;
   padding: 10px 24px;
@@ -221,19 +216,19 @@ body {
   border-radius: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2)
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.2);
 }
 .enroll-btn:hover {
-   background-color: #2563eb;
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+  background-color: #7c3aed;
+  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.35);
   transform: translateY(-1px);
 }
+
 /* Footer */
 .ascend-footer {
   background-color: #1c2434;
   color: #cbd5e1;
   padding: 3rem 2rem 1.5rem;
-  font-family: 'Poppins', sans-serif;
 }
 .footer-wrapper {
   max-width: 1200px;
@@ -271,7 +266,7 @@ body {
   transition: color 0.3s ease;
 }
 .footer-links a:hover {
-  color: #3b82f6;
+  color: #a78bfa;
 }
 .footer-bottom {
   margin-top: 2rem;
