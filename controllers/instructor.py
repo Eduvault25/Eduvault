@@ -21,7 +21,6 @@ def instructor_dashboard():
     total_courses = len(courses)
     total_published = len(published_courses)
     total_drafts = len(draft_courses)
-    total_students = sum(c.get("students", 0) for c in published_courses)
 
     # Parse and stats
     def compute_course_stats(course):
